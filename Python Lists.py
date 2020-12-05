@@ -72,4 +72,60 @@ def combine_sort(lst1, lst2):
 
 print(combine_sort([4, 10, 2, 5], [-10, 2, 5, 10]))
 
-#next exercises
+#Advanced Lists exercises
+#1
+def every_three_nums(start):
+  if start < 100:
+    jump3 = list(range(start, 101, 3))
+    return jump3
+  elif start == 100:
+    return [start]
+  else:
+    return []
+
+print(every_three_nums(91))
+
+#2
+def remove_middle(lst, start, end):
+    x = end + 1
+    lst[start:x] = []
+    return lst
+    
+print(remove_middle([4, 8, 15, 16, 23, 42], 1, 3))
+
+#3
+def more_frequent_item(lst, item1, item2):
+    x = lst.count(item1)
+    y = lst.count(item2)
+    if x >= y:
+        return item1
+    else:
+        return item2
+
+print(more_frequent_item([2, 3, 3, 2, 3, 2, 3, 2, 3], 2, 3))
+
+#4
+def double_index(lst, index):
+  list_length = len(lst) - 1
+  if list_length >= index:
+      replacement_value = lst[index] * 2
+      lst[index] = replacement_value
+      return lst
+  else:
+      return lst
+
+print(double_index([3, 8, -10, 12], 5))
+
+#5
+def middle_element(lst):
+    list_length = len(lst)
+    if list_length % 2 == 0:
+        x = list_length / 2
+        y = x - 1
+        sum = lst[int(x)] + lst[int(y)]
+        return sum / 2
+    else:
+        x = list_length - 1
+        return lst[int(x/2)]
+
+print(middle_element([5, 2, -10, -4, 4, 5]))
