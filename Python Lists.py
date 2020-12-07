@@ -152,3 +152,4 @@ priciest_three = medical_records[-3:]
 print('Here are the three most expensive insurance costs in our medical records: ', priciest_three)
 occurrences_paul = names.count('Paul')
 print('There are',occurrences_paul, 'people in our list called Paul')
+
